@@ -3,13 +3,14 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBZpoMZPkS2_ZCzKgKE079yIK4C1X1HAfY",
-  authDomain: "finance-tracker-c20c5.firebaseapp.com",
-  projectId: "finance-tracker-c20c5",
-  storageBucket: "finance-tracker-c20c5.firebasestorage.app",
-  messagingSenderId: "1009842347807",
-  appId: "1:1009842347807:web:db7017520c0cac0dc79a2a"
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_APP_ID,
 };
+
 
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth(app);
